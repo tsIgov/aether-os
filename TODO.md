@@ -22,6 +22,7 @@ aether rollback
 Firewall
 Win + F doesn't revert full screen but maximizes instead
 
+Default apps and utils
 eza instead of ls
 
 
@@ -42,5 +43,6 @@ pkgs.nixosOptionsDoc
 - bluetui theme
 - btop theme
 
+Names for the audio/bluethoot/process monitor/wifi
 Darken background between between gaps
 Themes other than cattpuccin
