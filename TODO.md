@@ -24,7 +24,6 @@ Win + F doesn't revert full screen but maximizes instead
 
 eza instead of ls
 
-pkgs.nixosOptionsDoc
 
 ## Float
 class": "code",
@@ -35,6 +34,7 @@ class": "code",
 ## OS
 Remove some desktop files
 Auto login and remove SDDM
+pkgs.nixosOptionsDoc
 
 ## Appearance
 - wiremix theme

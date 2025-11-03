@@ -13,9 +13,9 @@
 	let
 		pkgs = import inputs.nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
 		lib = inputs.nixpkgs.lib;
-		aetherLib = import ./lib { inherit pkgs lib; };
-		aetherPkgs = import ./packages { inherit pkgs lib aetherLib; };
-		aetherThemes = import ./themes { inherit pkgs lib aetherLib aetherPkgs; };
+		aetherLib = import ../lib { inherit pkgs lib; };
+		aetherPkgs = import ../packages { inherit pkgs lib aetherLib; };
+		aetherThemes = import ../themes { inherit pkgs lib aetherLib aetherPkgs; };
 
 		aether = {
 			pkgs = aetherPkgs;
