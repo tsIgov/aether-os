@@ -10,7 +10,6 @@ Discord
 Bazecore
 
 ## Usability
-Configure XDG (notes in digital brain) - file manager
 Kitty grab
 Configure the websearch
 
@@ -22,8 +21,10 @@ aether rollback
 Firewall
 Win + F doesn't revert full screen but maximizes instead
 
+Configure XDG (notes in digital brain) - file manager
 Default apps and utils
 eza instead of ls
+micro, texteditor
 
 
 ## Float
