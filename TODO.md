@@ -21,10 +21,18 @@ Firewall
 Win + F doesn't revert full screen but maximizes instead
 
 Configure XDG (notes in digital brain) - file manager
-Default apps and utils
+Default apps and utils (xdg.mimeApps.enable is currently in micro)
 eza instead of ls
-micro, texteditor
 localsend
+
+system.userActivationScripts or system.activationScripts can be used to restart elephant or rebuild the .desktop file cache
+
+system.name
+system.build
+system.switch
+system.tools
+system.nixos
+documentation.nixos.enable
 
 
 ## Float
