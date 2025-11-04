@@ -1,0 +1,45 @@
+color-link default "#@foreground0@"
+color-link comment "#@foreground1@"
+color-link selection "#@background2@,#@primary@"
+color-link hlsearch "#@secondary@"
+
+color-link identifier "#@blue@"
+color-link identifier.class "#@yellow@"
+color-link identifier.var "#@magenta@"
+
+color-link constant "#@orange@"
+color-link constant.number "#@orange@"
+color-link constant.string "#@green@"
+
+color-link symbol "#@cyan@"
+color-link symbol.brackets "#@primary@"
+color-link symbol.tag "#@blue@"
+
+color-link type "#@yellow@"
+color-link type.keyword "#@violet@"
+
+color-link special "#@cyan@"
+color-link statement "#@violet@"
+color-link preproc "#@red@"
+
+color-link underlined "#@primary@"
+color-link error "bold #@error@"
+color-link todo "bold #@warning@"
+
+color-link diff-added "#@green@"
+color-link diff-modified "#@warning@"
+color-link diff-deleted "#@error@"
+
+color-link gutter-error "#@error@"
+color-link gutter-warning "#@warning@"
+
+color-link scrollbar "#@foreground1@"
+color-link statusline "#@foreground2@,#@surface0@"
+color-link tabbar "#@foreground1@,#@surface0@"
+color-link indent-char "#@foreground2@"
+color-link line-number "#@foreground2@"
+color-link current-line-number "#@primary@"
+
+color-link cursor-line "#@surface0@"
+color-link color-column "#@foreground2@"
+color-link type.extended "#@yellow@"

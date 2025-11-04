@@ -12,8 +12,8 @@ in
 				gaps_workspaces = 0;
 
 				"col.active_border" = "rgb(${palette.primary})";
-				"col.inactive_border" = "rgb(${palette.overlay})";
-				"col.nogroup_border" = "rgb(${palette.overlay})";
+				"col.inactive_border" = "rgb(${palette.surface2})";
+				"col.nogroup_border" = "rgb(${palette.surface2})";
 				"col.nogroup_border_active" = "rgb(${palette.primary})";
 			};
 
@@ -42,7 +42,7 @@ in
 				"col.border_active" = "rgb(${palette.secondary})";
 				"col.border_inactive" = "rgb(${palette.surface2})";
 				"col.border_locked_active" = "rgb(${palette.primary})";
-				"col.border_locked_inactive" = "rgb(${palette.overlay})";
+				"col.border_locked_inactive" = "rgb(${palette.surface2})";
 
 				groupbar = {
 					enabled = true;
@@ -51,9 +51,9 @@ in
 					keep_upper_gap = false;
 
 					"col.active" = "rgb(${palette.secondary})";
-					"col.inactive" = "rgb(${palette.overlay})";
+					"col.inactive" = "rgb(${palette.surface2})";
 					"col.locked_active" = "rgb(${palette.primary})";
-					"col.locked_inactive" = "rgb(${palette.overlay})";
+					"col.locked_inactive" = "rgb(${palette.surface2})";
 				};
 			};
 

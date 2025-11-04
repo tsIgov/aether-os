@@ -144,7 +144,7 @@
 .widget-dnd > switch slider {
   background: @surface1;
   border-radius: 8px;
-  border: 1px solid @overlay;
+  border: 1px solid @surface2;
 }
 
 
