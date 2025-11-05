@@ -1,3 +1,6 @@
+BACKGROUND_COLOR="$1"
+FOREGROUND_COLOR="$2"
+
 mkdir -p $TMPDIR/processed
 for svg in $(find ./images -name "*.svg"); do
 	name=$(basename "$svg" .svg)

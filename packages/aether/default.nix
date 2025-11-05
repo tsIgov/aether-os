@@ -1,11 +1,11 @@
-{ stdenv }:
+{ aetherDrv }:
 
-stdenv.mkDerivation {
-	pname = "aether";
+aetherDrv {
+	name = "aether";
 	version = "1.0";
 
-	srcs = [ ./src	];
-	sourceRoot = "./src";
-
-	dontBuild = true;
+	srcs = [
+		./src
+		./make
+	];
 }

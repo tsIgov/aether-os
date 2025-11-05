@@ -1,10 +1,6 @@
 {
-	stdenv,
-	lib,
-
+	aetherDrv,
 	python3,
-
-	makeWrapper,
 
 	color-scheme ? null
 }:
@@ -13,27 +9,20 @@ let
 	palette = import ./createPalette.nix color-scheme;
 in
 
-stdenv.mkDerivation rec {
-	pname = "aether-recolor";
+aetherDrv {
+	name = "aether-recolor";
 	version = "1.0";
-
-	buildInputs = [ python ];
-	nativeBuildInputs = [ makeWrapper ];
 
 	srcs = [
 		./src
 		./lib/basic_colormath.tar.gz
 		./lib/color_manager.tar.gz
+		./make
 	];
-	sourceRoot = "./src";
 
-	buildPhase = ''
-		echo -e '${palette}' > palette.json
-	'';
+	buildArgs = [
+		palette
+	];
 
-	postInstall = ''
-		wrapProgram $out/bin/aether-recolor \
-			--prefix PATH : ${lib.makeBinPath buildInputs }
-	'';
-
+	runtimeDeps = [ python ];
 }

@@ -1,22 +1,24 @@
 {
-	stdenv,
+	aetherDrv,
 	inkscape,
 
 	background-color ? null,
 	foreground-color ? null
 }:
 
-stdenv.mkDerivation {
-	pname = "aether-wallpapers";
+aetherDrv {
+	name = "aether-wallpapers";
 	version = "1.0";
 
-	buildInputs = [ inkscape ];
+	buildDeps = [ inkscape ];
 
-	srcs = [ ./src ];
-	sourceRoot = "./src";
+	srcs = [
+		./make
+		./images
+	];
 
-	buildFlags = [
-		"BACKGROUND_COLOR=${background-color}"
-		"FOREGROUND_COLOR=${foreground-color}"
+	buildArgs = [
+		background-color
+		foreground-color
 	];
 }

@@ -1,8 +1,11 @@
 { pkgs, lib, aetherLib }:
+let
+	aetherDrv = aetherLib.packageUtils.aetherDrv;
+in
 rec {
-	aether = pkgs.callPackage ./aether { };
-	aether-install = pkgs.callPackage ./aether-install { };
-	recolor = pkgs.callPackage ./recolor { };
-	icons = pkgs.callPackage ./icons { inherit recolor; };
-	wallpapers = pkgs.callPackage ./wallpapers { };
+	aether = pkgs.callPackage ./aether { inherit aetherDrv; };
+	aether-install = pkgs.callPackage ./aether-install { inherit aetherDrv; };
+	recolor = pkgs.callPackage ./recolor { inherit aetherDrv; };
+	icons = pkgs.callPackage ./icons { inherit aetherDrv recolor; };
+	wallpapers = pkgs.callPackage ./wallpapers { inherit aetherDrv; };
 }

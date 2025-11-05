@@ -1,6 +1,5 @@
 {
-	stdenv,
-	lib,
+	aetherDrv,
 
 	catppuccin-papirus-folders,
 	recolor,
@@ -17,25 +16,16 @@ let
 	recolorOvrd = recolor.override { inherit color-scheme; };
 in
 
-stdenv.mkDerivation {
-	pname = "aether-icons";
+aetherDrv {
+	name = "aether-icons";
 	version = "1.0";
 
-	nativeBuildInputs = [ recolorOvrd ];
+	buildDeps = [ recolorOvrd ];
 
 	srcs = [
 		"${icons}/share"
+		./make
 	];
-	sourceRoot = ".";
-
-	buildPhase = ''
-		${recolorOvrd}/bin/aether-recolor share/icons/Papirus $TMPDIR/output
-	'';
-
-	installPhase = ''
-		mkdir -p $out/share/icons
-		cp -r $TMPDIR/output $out/share/icons/aether-icons
-	'';
 
 	dontFixup = true;
 }

@@ -1,21 +1,9 @@
-{
-	lib,
-	stdenv,
-
-	gum,
-	iputils,
-	util-linux,
-	parted,
-	cryptsetup,
-
-	makeWrapper
-}:
-
-stdenv.mkDerivation rec {
-	pname = "aether-install";
+{ aetherDrv, pkgs }:
+aetherDrv {
+	name = "aether-install";
 	version = "1.0";
 
-	buildInputs = [
+	runtimeDeps = with pkgs; [
 		gum
 		iputils # ping
 		util-linux # cfdisk
@@ -23,17 +11,8 @@ stdenv.mkDerivation rec {
 		cryptsetup
 	];
 
-	nativeBuildInputs = [
-		makeWrapper
+	srcs = [
+		./src
+		./make
 	];
-
-	dontBuild = true;
-
-	srcs = [ ./src	];
-	sourceRoot = "./src";
-
-	postInstall = ''
-		wrapProgram $out/bin/aether-install \
-			--prefix PATH : ${lib.makeBinPath buildInputs}
-	'';
 }
