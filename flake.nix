@@ -12,8 +12,13 @@
 
 	outputs = inputs:
 	let
-		pkgs = import inputs.nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+
 		lib = inputs.nixpkgs.lib;
+		pkgs = import inputs.nixpkgs {
+			system = "x86_64-linux";
+			config.allowUnfree = true;
+			overlays = import ./overlays lib;
+		};
 		aetherLib = import ./lib { inherit pkgs lib; };
 		aetherPkgs = import ./packages { inherit pkgs lib aetherLib; };
 		aetherThemes = import ./themes { inherit pkgs lib aetherLib aetherPkgs; };

@@ -9,6 +9,7 @@ aetherDrv {
 		util-linux # cfdisk
 		parted
 		cryptsetup
+		nixos-install-tools
 	];
 
 	srcs = [

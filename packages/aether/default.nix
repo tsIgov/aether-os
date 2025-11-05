@@ -1,4 +1,4 @@
-{ aetherDrv }:
+{ aetherDrv, nixos-rebuild }:
 
 aetherDrv {
 	name = "aether";
@@ -8,4 +8,6 @@ aetherDrv {
 		./src
 		./make
 	];
+
+	runtimeDeps = [ nixos-rebuild ];
 }

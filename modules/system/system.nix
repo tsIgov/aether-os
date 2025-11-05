@@ -17,6 +17,19 @@ in
 		(lib.mkAliasOptionModule ["hm"] ["home-manager" "users" username])
 	];
 
+	system.tools = {
+		nixos-rebuild.enable = false;
+		nixos-version.enable = false;
+		nixos-option.enable = false;
+		nixos-install.enable = false;
+		nixos-generate-config.enable = false;
+		nixos-enter.enable = false;
+		nixos-build-vms.enable = false;
+	};
+
+	boot.enableContainers = false;
+	documentation.nixos.enable = false;
+
 	hm = {
 		programs.home-manager.enable = true;
 		news.display = "silent";
