@@ -17,7 +17,7 @@
 		pkgs = import inputs.nixpkgs {
 			system = "x86_64-linux";
 			config.allowUnfree = true;
-			overlays = import ./overlays lib;
+			overlays = import ./overlays lib "nixpkgs";
 		};
 		aetherLib = import ./lib { inherit pkgs lib; };
 		aetherPkgs = import ./packages { inherit pkgs lib aetherLib; };
