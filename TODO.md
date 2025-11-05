@@ -13,7 +13,7 @@ Bazecore
 Kitty grab
 Configure the websearch
 
-Pinning items in walker clipboard. Remove clipse
+Pinning items in walker clipboard. Remove clipse (or just sticky notes)
 Common places in Nemo sidebar
 Reconfigure Firefox
 
@@ -42,9 +42,8 @@ class": "code",
 "initialTitle": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
 
 ## OS
-Base on Arch? Snapshots?
 Remove some desktop files
-Auto login and remove SDDM
+Auto login and remove SDDM (open the keyring)
 pkgs.nixosOptionsDoc
 
 ## Appearance
