@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 strict_mode() {
     set -T # inherit DEBUG and RETURN trap for functions
     set -C # prevent file overwrite by > &> <>

@@ -10,9 +10,7 @@ in
 
 	environment.systemPackages = with pkgs; [
 
-		(aether.pkgs.aether.override {
-			aetherConfigLocation = "/home/${config.aether.user.username}/.config/aether";
-		})
+		(aether.pkgs.aether)
 	];
 
 	imports = [

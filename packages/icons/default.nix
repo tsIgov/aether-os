@@ -1,27 +1,32 @@
 {
 	stdenv,
 	lib,
-	catppuccin-papirus-folders,
 
+	catppuccin-papirus-folders,
 	recolor,
+
 	color-scheme ? null
 }:
 let
-	name = "aether-icons";
-	pname = "aether-icons";
-	version = "1.0";
+	icons = (catppuccin-papirus-folders.override
+		{
+			flavor = "mocha";
+			accent = "mauve";
+		}).overrideAttrs (oldAttrs: { dontFixup = true; });
 
-	recolorOvrd = recolor.override {
-		inherit color-scheme;
-	};
+	recolorOvrd = recolor.override { inherit color-scheme; };
 in
 
 stdenv.mkDerivation {
-	inherit name pname version;
+	pname = "aether-icons";
+	version = "1.0";
 
-	src = (catppuccin-papirus-folders.override { flavor = "mocha"; accent = "mauve"; }).overrideAttrs (oldAttrs: { dontFixup = true; });
+	nativeBuildInputs = [ recolorOvrd ];
 
-	buildInputs = [ recolorOvrd ];
+	srcs = [
+		"${icons}/share"
+	];
+	sourceRoot = ".";
 
 	buildPhase = ''
 		${recolorOvrd}/bin/aether-recolor share/icons/Papirus $TMPDIR/output

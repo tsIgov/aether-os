@@ -1,28 +1,19 @@
-{ lib, stdenv, gum, iputils, util-linux, parted, cryptsetup, makeWrapper, ... }:
+{
+	lib,
+	stdenv,
 
-stdenv.mkDerivation {
-	name = "aether-install";
+	gum,
+	iputils,
+	util-linux,
+	parted,
+	cryptsetup,
+
+	makeWrapper
+}:
+
+stdenv.mkDerivation rec {
 	pname = "aether-install";
 	version = "1.0";
-
-	srcs = [
-		./src/bin
-		./src/lib
-	];
-	sourceRoot = ".";
-
-	installPhase = ''
-		mkdir -p $out/bin
-
-		cp -r bin/aether-install.sh $out/bin/aether-install
-		cp -r lib $out/lib
-
-		chmod +x $out/bin/aether-install
-		chmod +x $out/lib/*.sh
-
-		wrapProgram $out/bin/aether-install \
-			--prefix PATH : ${lib.makeBinPath [ gum iputils util-linux parted cryptsetup ]}
-	'';
 
 	buildInputs = [
 		gum
@@ -36,4 +27,13 @@ stdenv.mkDerivation {
 		makeWrapper
 	];
 
+	dontBuild = true;
+
+	srcs = [ ./src	];
+	sourceRoot = "./src";
+
+	postInstall = ''
+		wrapProgram $out/bin/aether-install \
+			--prefix PATH : ${lib.makeBinPath buildInputs}
+	'';
 }

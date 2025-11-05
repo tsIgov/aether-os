@@ -1,6 +1,7 @@
 #! /bin/sh
 set -euo pipefail
 
+AETHER_CONFIG_LOCATION="$HOME/.config/aether"
 
 show_help() {
     cat << EOF

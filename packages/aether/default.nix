@@ -1,23 +1,11 @@
-{ pkgs, aetherConfigLocation ? "/$HOME/.config/aether" }:
+{ stdenv }:
 
-pkgs.stdenv.mkDerivation {
-  name = "aether";
-  pname = "aether";
-  version = "1.0";
+stdenv.mkDerivation {
+	pname = "aether";
+	version = "1.0";
 
-  src = ./aether.sh;
+	srcs = [ ./src	];
+	sourceRoot = "./src";
 
-  phases = [ "installPhase" ];
-
-  installPhase = ''
-    mkdir -p $out/bin
-    cp $src $out/bin/aether
-    chmod +x $out/bin/aether
-
-    # Wrap with env var
-    wrapProgram $out/bin/aether \
-      --set AETHER_CONFIG_LOCATION "${aetherConfigLocation}"
-  '';
-
-  nativeBuildInputs = [ pkgs.makeWrapper ];
+	dontBuild = true;
 }

@@ -1,46 +1,39 @@
-{ stdenv, makeWrapper, lib, python3, color-scheme ? null, ... }:
+{
+	stdenv,
+	lib,
+
+	python3,
+
+	makeWrapper,
+
+	color-scheme ? null
+}:
 let
-	name = "aether-recolor";
+	python = (python3.withPackages (pp: [ pp.tqdm pp.pillow ]));
+	palette = import ./createPalette.nix color-scheme;
+in
+
+stdenv.mkDerivation rec {
 	pname = "aether-recolor";
 	version = "1.0";
 
-	python = (python3.withPackages (pp: [ pp.tqdm pp.pillow ]));
-	createPlalette = import ./createPalette.nix color-scheme;
-in
-
-stdenv.mkDerivation {
-	inherit name pname version;
+	buildInputs = [ python ];
+	nativeBuildInputs = [ makeWrapper ];
 
 	srcs = [
-		./src/basic_colormath.tar.gz
-		./src/color_manager.tar.gz
-		./src/bin
+		./src
+		./lib/basic_colormath.tar.gz
+		./lib/color_manager.tar.gz
 	];
-	sourceRoot = ".";
-
-	buildInputs = [
-		python
-	];
-
-	nativeBuildInputs = [
-		makeWrapper
-	];
+	sourceRoot = "./src";
 
 	buildPhase = ''
-		echo -e '${createPlalette}' > palette.json
+		echo -e '${palette}' > palette.json
 	'';
 
-	installPhase = ''
-		mkdir -p $out/lib
-		mkdir -p $out/bin
-
-		cp -r basic_colormath $out/lib
-		cp -r color_manager $out/lib
-		cp palette.json $out/palette.json
-
-		cp bin/aether-recolor.sh $out/bin/aether-recolor
-		chmod +x $out/bin/aether-recolor
+	postInstall = ''
 		wrapProgram $out/bin/aether-recolor \
-			--prefix PATH : ${lib.makeBinPath [ python ]}
+			--prefix PATH : ${lib.makeBinPath buildInputs }
 	'';
+
 }
