@@ -1,6 +1,4 @@
-## Software
-
-Run web-apps with chromium
+## Local
 Calendar
 lazygit
 lazydocker
@@ -9,36 +7,35 @@ Password manager
 Discord
 Bazecore
 
-## Usability
-Kitty grab
-Configure the websearch
-
-Pinning items in walker clipboard. Remove clipse (or just sticky notes)
-Common places in Nemo sidebar
 Reconfigure Firefox
 
-Firewall
+## Usability
+Run web-apps with chromium
+Common places in Nemo sidebar or move to TUI
+
+Configure the websearch
+Firewall should be able to be configured separately
+
+Kitty grab
+Pinning items in walker clipboard. Remove clipse (or just sticky notes)
+
+Remove some desktop files
+Auto login and remove SDDM (open the keyring)
+
 Win + F doesn't revert full screen but maximizes instead
 
-Configure XDG (notes in digital brain) - file manager
-Default apps and utils (xdg.mimeApps.enable is currently in micro)
-eza instead of ls
-localsend
-
-system.userActivationScripts or system.activationScripts can be used to restart elephant or rebuild the .desktop file cache
-
 ## Float
+Start all windows as floating and tile them manually?
+
 class": "code",
 "title": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
 "initialClass": "code",
 "initialTitle": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
 
-## OS
-Remove some desktop files
-Auto login and remove SDDM (open the keyring)
-pkgs.nixosOptionsDoc
-
 ## Appearance
+color bash simillar to fish
+semantic colors?
+
 - wiremix theme
 - impala theme
 - bluetui theme
