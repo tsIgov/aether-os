@@ -1,5 +1,5 @@
 {
-	description = "Igov's work computer";
+	description = "AetherOS";
 
 	inputs = {
 		aether.url = "github:tsIgov/aether-desktop-environment";

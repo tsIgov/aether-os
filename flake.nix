@@ -1,5 +1,5 @@
 {
-	description = "Aether desktop environment";
+	description = "AetherOS";
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
