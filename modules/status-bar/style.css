@@ -10,7 +10,7 @@
 
 #waybar {
 	background-color: @background0;
-	color: @text;
+	color: @foreground0;
 	border: 2px solid @surface0;
 	font-size: 14px;
 	border-radius: 2px;

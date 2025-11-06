@@ -27,14 +27,6 @@ localsend
 
 system.userActivationScripts or system.activationScripts can be used to restart elephant or rebuild the .desktop file cache
 
-system.name
-system.build
-system.switch
-system.tools
-system.nixos
-documentation.nixos.enable
-
-
 ## Float
 class": "code",
 "title": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
