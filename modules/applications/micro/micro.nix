@@ -43,13 +43,6 @@ in
 				type = "Application";
 				categories = [ "TextEditor" "Utility" ];
 			};
-
-			mimeApps = {
-				enable = true;
-				defaultApplications = {
-					"text/plain" = [ "micro.desktop" ];
-				};
-			};
 		};
 
 	};
