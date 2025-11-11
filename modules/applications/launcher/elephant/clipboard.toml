@@ -1,0 +1,5 @@
+max_items = 1000
+command = "wl-copy"
+recopy = true
+ignore_symbols = true
+auto_cleanup = 600

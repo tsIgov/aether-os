@@ -1,4 +1,10 @@
+history = false
+history_when_empty = false
+engines_as_actions = false
+command = "xdg-open"
+
 [[entries]]
 default = true
 name = "Google"
 url = "https://www.google.com/search?q=%TERM%"
+icon = "google"

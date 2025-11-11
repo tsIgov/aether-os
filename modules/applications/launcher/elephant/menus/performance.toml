@@ -5,10 +5,11 @@ keywords = [ "performance" ]
 fixed_order = true
 history = false
 history_when_empty = false
+parent = "aether"
 
 [[entries]]
 text = "Auto"
-action = "sudo auto-cpufreq --force reset"
+actions = { "run" = "sudo auto-cpufreq --force reset" }
 icon = "edit-undo-symbolic"
 
 [[entries]]
