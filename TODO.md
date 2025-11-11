@@ -10,24 +10,23 @@ Bazecore
 Reconfigure Firefox
 
 ## Usability
-Run web-apps with chromium
 Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
 
-Configure the websearch
+Configurable websearch
+Style the clipboard preview
+Rework the menus
+create a note provider
+remove clipse
+wifi and bluetooth through menus?
+
 Firewall should be able to be configured separately
-
 Kitty grab
-Update walker and elephant
-Pinning items in walker clipboard. Remove clipse (or just sticky notes)
-
-Remove some desktop files (blacklist in elephant)
-	- kvantum
-	- fish
-	- autocpufreq
-	- uuctl
 Auto login and remove SDDM (open the keyring)
 
 Win + F doesn't revert full screen but maximizes instead
+
+## Optional
+Run web-apps with chromium
 
 ## Shell utils
 zoxide - cd

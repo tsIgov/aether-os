@@ -46,12 +46,6 @@
 					page_up = ["Page_Up"];
 				};
 
-				# placeholders.default = {
-				# 	input = "Search";
-				# 	list = "No Results";
-				# };
-
-
 				providers = {
 					default = [ "desktopapplications" "calc" ];
 					empty = [ "desktopapplications" ];
@@ -66,10 +60,33 @@
 						{ provider = "menus:aether"; prefix = "/"; }
 					];
 					actions = {
+						fallback = [
+							{ action = "menus:open"; label = "open"; after = "Nothing"; }
+							{ action = "menus:default"; label = "run"; after = "Close"; }
+							{ action = "menus:parent"; label = "back"; bind = "Escape"; after = "Nothing"; }
+							{ action = "erase_history"; label = "clear hist"; bind = "ctrl h"; after = "AsyncReload"; }
+						];
+
 						calc = [
 							{ action = "copy"; default = true; bind = "Return"; }
 							{ action = "delete"; bind = "ctrl d"; after = "AsyncReload"; }
 							{ action = "save"; bind = "ctrl s"; after = "AsyncClearReload"; }
+						];
+
+						desktopapplications = [
+							{ action = "start"; default = true; bind = "Return"; }
+							{ action = "start:keep"; unset = true; }
+							{ action = "new_instance"; unset = true; }
+							{ action = "new_instance:keep"; unset = true; }
+							{ action = "pin"; unset = true; }
+							{ action = "unpin"; unset = true; }
+							{ action = "pinup"; unset = true; }
+							{ action = "pindown"; unset = true; }
+						];
+
+						"menus:performance" = [
+							{ action = "run"; default = true; bind = "Return"; }
+							{ action = "test-action"; bind = "ctrl t"; after = "AsyncReload"; }
 						];
 					};
 				};

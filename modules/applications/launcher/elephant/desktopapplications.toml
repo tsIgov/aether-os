@@ -2,11 +2,10 @@ show_actions = true
 show_generic = true
 show_actions_without_query = false
 history = true
-history_when_empty = false
+history_when_empty = true
 only_search_title = false
 icon_placeholder = "applications-other"
 blacklist = [ "kvantummanager", "auto-cpufreq", "fish", "uuctl" ]
-aliases = { nano  = "micro" }
 wm_integration = true
 single_instance_apps = []
 

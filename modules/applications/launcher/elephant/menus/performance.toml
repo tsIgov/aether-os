@@ -9,7 +9,7 @@ parent = "aether"
 
 [[entries]]
 text = "Auto"
-actions = { "run" = "sudo auto-cpufreq --force reset" }
+actions = { "run" = "sudo auto-cpufreq --force reset", "test-action" = "mkdir ~/ttttt" }
 icon = "edit-undo-symbolic"
 
 [[entries]]

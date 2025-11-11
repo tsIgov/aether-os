@@ -1,4 +1,4 @@
-{ pkgs, config, aether, ... }:
+{ pkgs, config, ... }:
 let
 	palette = config.aether.theme.color-scheme;
 	micro-gui = pkgs.writeShellScriptBin "micro-gui" ''
@@ -11,7 +11,6 @@ in
 		systemPackages = with pkgs; [
 			micro
 			micro-gui
-			aether.inputs.superfile.packages."x86_64-linux".default
 		];
 		variables = {
 			EDITOR = "micro";

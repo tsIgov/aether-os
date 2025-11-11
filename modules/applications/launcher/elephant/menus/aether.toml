@@ -71,5 +71,5 @@ keywords = [ "process", "task", "monitor", "manager" ]
 [[entries]]
 text = "Color Picker"
 icon = "color-select-symbolic"
-action = "hyprpicker -a"
+actions = { "run" = "hyprpicker -a" }
 keywords = [ "color", "picker" ]
