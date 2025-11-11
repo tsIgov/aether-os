@@ -11,12 +11,13 @@ Reconfigure Firefox
 
 ## Usability
 Run web-apps with chromium
-Common places in Nemo sidebar or move to TUI
+Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
 
 Configure the websearch
 Firewall should be able to be configured separately
 
 Kitty grab
+Update walker and elephant
 Pinning items in walker clipboard. Remove clipse (or just sticky notes)
 
 Remove some desktop files (blacklist in elephant)

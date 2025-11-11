@@ -5,7 +5,7 @@
 }
 
 selection {
-	background: alpha(@overlay, 0.3);
+	background: alpha(#@overlay@, 0.3);
 }
 
 .normal-icons {	-gtk-icon-size: 16px; }
@@ -19,16 +19,16 @@ scrollbar {
 
 
 .fullscreen {
-	background: alpha(@background2, 0.4);
+	background: alpha(#@background2@, 0.4);
 }
 
 .box-wrapper {
-	background: @background2;
-	color: @foreground0;
+	background: #@background2@;
+	color: @foreground0@;
   	font-size: 14px;
 	padding: 20px;
 	border-radius: 4px;
-	border: 1px solid @primary;
+	border: 1px solid #@primary@;
 }
 
 
@@ -37,25 +37,25 @@ scrollbar {
 }
 
 .input {
-	caret-color: @foreground0;
-	background: @background1;
+	caret-color: #@foreground0@;
+	background: #@background1@;
 	padding: 10px;
 }
 
 .input placeholder {
-	color: @foreground1;
+	color: #@foreground1@;
 }
 .input:focus,
 .input:active {
 }
 
 .content-container {
-	background: @background2;
+	background: #@background2@;
 	font-weight: bold;
 }
 
 .list {
-	color: @foreground0;
+	color: #@foreground0@;
 }
 
 child {
@@ -63,7 +63,7 @@ child {
 child:hover .item-box,
 child:selected .item-box {
   /* background: alpha(@primary, 1); */
-  color: @primary;
+  color: #@primary@;
 }
 
 .item-box {
@@ -73,7 +73,7 @@ child:selected .item-box {
 
 .item-quick-activation {
   margin-left: 10px;
-  background: @background1;
+  background: #@background1@;
   border-radius: 4px;
   padding: 10px;
 }
@@ -97,14 +97,14 @@ child:selected .item-box {
 
 
 
-.keybind-hints {
+.keybind {
   font-size: 12px;
   opacity: 0.5;
-  color: @foreground1;
+  color: #@foreground1@;
 }
 
 .preview {
-  border: 1px solid alpha(@primary, 0.4);
+  border: 1px solid alpha(#@primary@, 0.4);
   padding: 10px;
   border-radius: 4px;
   color: @text;

@@ -7,12 +7,16 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		walker.url = "github:abenz1267/walker";
+		elephant.url = "github:abenz1267/elephant";
+		walker = {
+			url = "github:abenz1267/walker";
+			inputs.elephant.follows = "elephant";
+		};
+		superfile.url = "github:yorukot/superfile";
 	};
 
 	outputs = inputs:
 	let
-
 		lib = inputs.nixpkgs.lib;
 		pkgs = import inputs.nixpkgs {
 			system = "x86_64-linux";
