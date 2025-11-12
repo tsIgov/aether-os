@@ -50,6 +50,7 @@
 					default = [ "desktopapplications" "calc" ];
 					empty = [ "desktopapplications" ];
 					max_results = 50;
+
 					prefixes = [
 						{ provider = "menus:notes"; prefix = "!"; }
 						{ provider = "websearch"; prefix = "@"; }
@@ -58,6 +59,7 @@
 						{ provider = "calc"; prefix = "="; }
 						{ provider = "menus:aether"; prefix = "/"; }
 					];
+
 					actions = {
 						fallback = [
 							{ action = "menus:open"; label = "open"; after = "Nothing"; }
@@ -88,11 +90,6 @@
 							{ action = "delete"; label = "delete"; bind = "ctrl shift d"; after = "AsyncReload"; }
 							{ action = "edit"; label = "edit"; bind = "ctrl e"; after = "Close"; }
 							{ action = "copy"; label = "copy"; bind = "Return"; after = "Close"; }
-						];
-
-						"menus:performance" = [
-							{ action = "run"; default = true; bind = "Return"; }
-							{ action = "test-action"; bind = "ctrl t"; after = "AsyncReload"; }
 						];
 					};
 				};

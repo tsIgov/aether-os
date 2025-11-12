@@ -10,20 +10,20 @@ history_when_empty = false
 [[entries]]
 text = "Audio"
 icon = "audio-speakers-symbolic"
-action = "kitty --class wiremix wiremix"
+actions = { "run" = "kitty --class wiremix wiremix" }
 keywords = [ "audio", "wiremix" ]
 
 [[entries]]
 text = "Bluetooth"
 icon = "network-bluetooth-symbolic"
-action = "kitty --class bluetui bluetui"
+actions = { "run" = "kitty --class bluetui bluetui" }
 keywords = [ "bluetooth", "bluetui" ]
 
 [[entries]]
 text = "Idle"
 async = """echo "Idle Inhibiton: $(/etc/aether/power/scripts/inhibition-status.sh)" """
 icon = "stopwatch-symbolic"
-action = "/etc/aether/power/scripts/inhibition-toggle.sh"
+actions = { "run" = "/etc/aether/power/scripts/inhibition-toggle.sh" }
 keywords = [ "idle", "inhibition" ]
 
 [[entries]]
@@ -41,31 +41,31 @@ keywords = [ "performance" ]
 [[entries]]
 text = "Screenshot"
 icon = "camera-photo-symbolic"
-action = "/etc/aether/screen-capture/scripts/screenshot.sh"
+actions = { "run" = "/etc/aether/screen-capture/scripts/screenshot.sh" }
 keywords = [ "screenshot", "screen", "capture" ]
 
 [[entries]]
 text = "Record Screen"
-action = "kooha"
+actions = { "run" = "kooha" }
 icon = "camera-video-symbolic"
 keywords = [ "record", "video", "capture", "screen" ]
 
 [[entries]]
 text = "Wifi"
 icon = "network-wireless-connected-100-symbolic"
-action = "kitty --class impala impala"
+actions = { "run" = "kitty --class impala impala" }
 keywords = [ "network", "wifi", "wi-fi", "wireless", "impala" ]
 
 [[entries]]
 text = "Garbage Collect"
 icon = "user-trash-symbolic"
-action = "/etc/aether/storage/scripts/garbage-collect.sh"
+actions = { "run" = "/etc/aether/storage/scripts/garbage-collect.sh" }
 keywords = [ "garbage", "collect", "store" ]
 
 [[entries]]
 text = "Process Monitor"
 icon = "cpu-symbolic"
-action = "kitty --class btop btop"
+actions = { "run" = "kitty --class btop btop" }
 keywords = [ "process", "task", "monitor", "manager" ]
 
 [[entries]]

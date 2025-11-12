@@ -9,15 +9,15 @@ parent = "aether"
 
 [[entries]]
 text = "Auto"
-actions = { "run" = "sudo auto-cpufreq --force reset", "test-action" = "mkdir ~/ttttt" }
+actions = { "run" = "sudo auto-cpufreq --force reset" }
 icon = "edit-undo-symbolic"
 
 [[entries]]
 text = "Power Saver"
-action = "sudo auto-cpufreq --force powersave"
+actions = { "run" = "sudo auto-cpufreq --force powersave" }
 icon = "battery-profile-powersave-symbolic"
 
 [[entries]]
 text = "Performance"
-action = "sudo auto-cpufreq --force performance"
+actions = { "run" = "sudo auto-cpufreq --force performance" }
 icon = "battery-profile-performance-symbolic"

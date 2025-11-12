@@ -8,34 +8,34 @@ history_when_empty = false
 
 [[entries]]
 text = "Shutdown"
-action = "systemctl poweroff"
+actions = { "run" = "systemctl poweroff" }
 icon = "system-shutdown-symbolic"
 keywords = [ "shutdown", "power", "poweroff", "off" ]
 
 [[entries]]
 text = "Reboot"
-action = "systemctl reboot"
+actions = { "run" = "systemctl reboot" }
 icon = "system-reboot-symbolic"
 keywords = [ "reboot", "restart" ]
 
 [[entries]]
 text = "Suspend"
-action = "systemctl suspend"
+actions = { "run" = "systemctl suspend" }
 icon = "system-suspend-symbolic"
 keywords = [ "suspend", "sleep" ]
 
 [[entries]]
 text = "Hibernate"
-action = "systemctl hibernate"
+actions = { "run" = "systemctl hibernate" }
 icon = "system-hibernate-symbolic"
 
 [[entries]]
 text = "Logout"
-action = "hyprctl dispatch exit"
+actions = { "run" = "hyprctl dispatch exit" }
 icon = "system-log-out-symbolic"
 
 [[entries]]
 text = "Lock Screen"
-action = "loginctl lock-session"
+actions = { "run" = "loginctl lock-session" }
 icon = "system-lock-screen-symbolic"
 

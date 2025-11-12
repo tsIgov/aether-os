@@ -13,8 +13,6 @@ Reconfigure Firefox
 Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
 
 Configurable websearch
-Rework the menus
-wifi and bluetooth through menus?
 
 Firewall should be able to be configured separately
 Kitty grab
