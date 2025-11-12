@@ -114,7 +114,9 @@ child:selected .item-box {
   -gtk-icon-size: 64px;
 }
 
-
+.preview-box {
+  color: #@foreground0@;
+}
 
 .calc .item-text {
   font-size: 24px;

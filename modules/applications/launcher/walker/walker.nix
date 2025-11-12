@@ -22,7 +22,7 @@
 				disable_mouse = false;
 				exact_search_prefix = "'";
 				force_keyboard_focus = true;
-				global_argument_delimiter = "#";
+				global_argument_delimiter = "?";
 				selection_wrap = false;
 				hide_quick_activation = true;
 				resume_last_query = false;
@@ -51,8 +51,7 @@
 					empty = [ "desktopapplications" ];
 					max_results = 50;
 					prefixes = [
-						{ provider = "desktopapplications"; prefix = "$"; }
-						{ provider = "clipboard"; prefix = "!"; }
+						{ provider = "menus:notes"; prefix = "!"; }
 						{ provider = "websearch"; prefix = "@"; }
 						{ provider = "symbols"; prefix = ":"; }
 						{ provider = "unicode"; prefix = ";"; }
@@ -82,6 +81,13 @@
 							{ action = "unpin"; unset = true; }
 							{ action = "pinup"; unset = true; }
 							{ action = "pindown"; unset = true; }
+						];
+
+						"menus:notes" = [
+							{ action = "add"; label = "add"; bind = "Return"; after = "Close"; }
+							{ action = "delete"; label = "delete"; bind = "ctrl shift d"; after = "AsyncReload"; }
+							{ action = "edit"; label = "edit"; bind = "ctrl e"; after = "Close"; }
+							{ action = "copy"; label = "copy"; bind = "Return"; after = "Close"; }
 						];
 
 						"menus:performance" = [

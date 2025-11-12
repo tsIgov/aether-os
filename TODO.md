@@ -13,10 +13,7 @@ Reconfigure Firefox
 Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
 
 Configurable websearch
-Style the clipboard preview
 Rework the menus
-create a note provider
-remove clipse
 wifi and bluetooth through menus?
 
 Firewall should be able to be configured separately
@@ -35,6 +32,7 @@ fd - find
 
 ## Float
 Start all windows as floating and tile them manually?
+Notes should be floating
 
 class": "code",
 "title": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",

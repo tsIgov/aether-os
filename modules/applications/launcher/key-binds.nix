@@ -5,6 +5,7 @@
 			extraConfig = ''
 				bindr = SUPER, SUPER_L, exec, walker
 				bind = SUPER, Slash, exec, walker -m menus:aether
+				bind = SUPER, V, exec, walker -m clipboard
 				bind = CTRL ALT, Delete, exec, walker -m menus:power
 
 				bind = SUPER, T, exec, ${pkgs.kitty}/bin/kitty
