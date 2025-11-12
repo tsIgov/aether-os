@@ -1,6 +1,6 @@
 { aether, ... }:
 let
-  elephantPkg = aether.inputs.elephant.packages."x86_64-linux".default;
+	elephantPkg = aether.inputs.elephant.packages."x86_64-linux".default;
 in
 {
 	hm = {
@@ -9,7 +9,6 @@ in
 		home.file.".config/elephant/menus".source = ./menus;
 
 		home.file.".config/elephant/desktopapplications.toml".source = ./desktopapplications.toml;
-		home.file.".config/elephant/websearch.toml".source = ./websearch.toml;
 		home.file.".config/elephant/clipboard.toml".source = ./clipboard.toml;
 	};
 }

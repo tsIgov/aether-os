@@ -1,20 +1,6 @@
-## Local
-Calendar
-lazygit
-lazydocker
-Mail client
-Password manager
-Discord
-Bazecore
-
-Reconfigure Firefox
-
 ## Usability
 Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
 
-Configurable websearch
-
-Firewall should be able to be configured separately
 Kitty grab
 Auto login and remove SDDM (open the keyring)
 
