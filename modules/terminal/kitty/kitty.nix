@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, aether, ... }:
 let
 	palette = config.aether.theme.color-scheme;
 in
@@ -17,6 +17,10 @@ in
 				window_padding_width = 25;
 				confirm_os_window_close = 0;
 				enable_audio_bell = "no";
+
+				cursor_shape = "beam";
+				cursor_shape_unfocused = "unchanged";
+				cursor_blink_interval = 1;
 
 				foreground ="#${palette.foreground0}";
 				background = "#${palette.background0}";
@@ -69,11 +73,11 @@ in
 				# white
 				color7 = "#${palette.foreground0}";
 				color15 = "#${palette.foreground0}";
+
+				clear_all_shortcuts = "yes";
 			};
 
 			keybindings = {
-				"clear_all_shortcuts" = "yes";
-
 				"ctrl+c" = "copy_and_clear_or_interrupt";
 				"ctrl+v" = "paste_from_clipboard";
 
@@ -91,6 +95,11 @@ in
 				"ctrl+shift+kp_add" = "change_font_size all +1.0";
 				"ctrl+shift+minus" = "change_font_size all -1.0";
 				"ctrl+shift+kp_subtract" = "change_font_size all -1.0";
+				"ctrl+shift+backslash" = "signal_child SIGTERM";
+				"ctrl+shift+c" = "signal_child SIGINT";
+				"ctrl+shift+z" = "signal_child SIGSTP";
+				"ctrl+shift+k" = "signal_child SIGKILL";
+				"ctrl+s" = "kitten kitty_grab/grab.py";
 			};
 		};
 	};
