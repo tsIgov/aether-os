@@ -11,8 +11,9 @@ aetherDrv {
 			owner = "yurikhan";
 			repo = "kitty_grab";
 			rev = "969e363295b48f62fdcbf29987c77ac222109c41";
-			sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+			sha256 = "sha256-DamZpYkyVjxRKNtW5LTLX1OU47xgd/ayiimDorVSamE=";
 		})
+		./make
 	];
 
 	dontFixup = true;

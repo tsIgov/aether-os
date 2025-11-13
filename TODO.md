@@ -1,13 +1,9 @@
 ## Usability
-Common places in Nemo sidebar or move to TUI (clifm, yazi broot superfile)
-
-Kitty grab
 Auto login and remove SDDM (open the keyring)
-
-Win + F doesn't revert full screen but maximizes instead
 
 ## Optional
 Run web-apps with chromium
+Move to TUI file manager (clifm, yazi broot superfile)
 
 ## Shell utils
 zoxide - cd
@@ -16,6 +12,7 @@ fd - find
 
 ## Float
 Start all windows as floating and tile them manually?
+Win + F doesn't revert full screen but maximizes instead
 Notes should be floating
 
 class": "code",
