@@ -15,11 +15,6 @@ Start all windows as floating and tile them manually?
 Win + F doesn't revert full screen but maximizes instead
 Notes should be floating
 
-class": "code",
-"title": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
-"initialClass": "code",
-"initialTitle": "Choose a folder to clone https://github.com/tsIgov/aether-os.git into",
-
 ## Appearance
 color bash simillar to fish
 semantic colors?
