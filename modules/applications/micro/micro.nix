@@ -2,7 +2,7 @@
 let
 	palette = config.aether.theme.color-scheme;
 	micro-gui = pkgs.writeShellScriptBin "micro-gui" ''
-		${pkgs.kitty}/bin/kitty --class micro micro "$@"
+		${pkgs.kitty}/bin/kitty --class micro --title Micro micro "$@"
 	'';
 in
 {

@@ -99,7 +99,8 @@ in
 				"ctrl+shift+c" = "signal_child SIGINT";
 				"ctrl+shift+z" = "signal_child SIGSTP";
 				"ctrl+shift+k" = "signal_child SIGKILL";
-				"ctrl+s" = "kitten kitty_grab/grab.py";
+				"ctrl+shift+s" = "kitten kitty_grab/grab.py";
+				"alt+s" = "kitten kitty_grab/grab.py";
 			};
 		};
 	};
