@@ -1,10 +1,8 @@
 --exact
 --style full
---height ~20
 --layout reverse
+--walker 'file,dir,follow,hidden'
 
---header-label ' File Type '
---bind 'focus:transform-footer(file --brief {} || echo "No file selected")+transform-preview-label(basename {})'
 --bind 'load:unbind(ctrl-n)'
 --bind 'ctrl-p:toggle-preview'
 --bind 'ctrl-r:reload(sleep 2; git ls-files)'
@@ -14,15 +12,13 @@
 --color 'header-label:#@foreground2@'
 --color 'header-fg:#@foreground2@'
 
---footer ' FOOTER VALUE '
---footer-label ' File Type '
 --color 'footer-border:#@foreground2@'
 --color 'footer-label:#@foreground2@'
 --color 'footer-fg:#@foreground2@'
 
-
---preview 'head -$LINES {}'
+--preview '/etc/aether/applications/scripts/fzf-preview.sh {}'
 --preview-window hidden
+
 
 --color 'preview-border:#@foreground0@'
 --color 'preview-label:#@foreground0@'

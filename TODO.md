@@ -1,11 +1,6 @@
 ## Usability
 Auto login and remove SDDM (open the keyring)
-
-## Shell utils
-fzf
-zoxide - cd
-rigrep - grep
-fd - find
+Change to niri
 
 ## Appearance
 Remove QT?
