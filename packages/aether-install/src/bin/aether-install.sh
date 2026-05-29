@@ -572,7 +572,7 @@ install() {
 			error_message "Instalation failed."
 			option=$(echo -e "Retry\nStart over" | gum choose --header "" || true)
 			case "$option" in
-				"Try again") continue;;
+				"Retry") continue;;
 				*)
 					reset_values
 					return

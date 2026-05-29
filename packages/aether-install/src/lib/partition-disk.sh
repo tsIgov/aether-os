@@ -57,6 +57,7 @@ sudo wipefs -fa "$root_part" &>/dev/null || true
 
 sudo parted -s "/dev/$disk" set $efi_part_num esp on
 sudo parted -s "/dev/$disk" set $efi_part_num boot on
+sudo partprobe "/dev/$disk"
 
 sudo mkfs.fat -F 32 "$efi_part" -n "aether-boot"
 echo -n "$encryption_password" | sudo cryptsetup luksFormat --type luks2 --label="AetherOS-encrypted" "$root_part"
@@ -67,14 +68,17 @@ sudo vgcreate lvmroot /dev/mapper/cryptroot
 if [[ $swap_size_mib -gt 0 ]]; then
 	sudo lvcreate --size ${swap_size_mib}M lvmroot --name swap
 	sudo mkswap -L "AetherOS-swap" /dev/mapper/lvmroot-swap
+	sudo partprobe "/dev/$disk"
 	sudo swapon /dev/disk/by-label/AetherOS-swap
 fi
 
 sudo lvcreate -l 100%FREE lvmroot --name root
 sudo mkfs.ext4 -L "AetherOS-root" /dev/mapper/lvmroot-root
 
+sudo udevadm settle
+
 sudo mkdir /mnt
-sudo mount /dev/disk/by-label/AetherOS-root /mnt
+sudo mount /dev/mapper/lvmroot-root /mnt
 sudo mkdir /mnt/boot
 sudo mount "$efi_part" /mnt/boot
 

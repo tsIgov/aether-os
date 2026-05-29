@@ -9,4 +9,4 @@ strict_mode(){
 }
 strict_mode
 
-sudo nixos-install --root /mnt --no-root-passwd --flake /mnt/aether-os#aether-os
+sudo nixos-install --root /mnt --no-root-passwd --flake /mnt/etc/aether-os#aether-os
