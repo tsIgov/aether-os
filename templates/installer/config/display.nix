@@ -11,7 +11,6 @@
 						scale = "auto";
 						resolution = "preferred";
 						position = "auto";
-						scale = "auto";
 						extraArgs = "";
 					}
 					{
