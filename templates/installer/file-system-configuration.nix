@@ -13,8 +13,5 @@
 			device = "/dev/disk/by-label/aether-boot";
 			fsType = "vfat";
 		};
-		# swapDevices = [
-		# 	{ device = "/dev/disk/by-label/AetherOS-swap"; }
-		# ];
 	};
 }
