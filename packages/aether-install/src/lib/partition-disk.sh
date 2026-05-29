@@ -33,11 +33,19 @@ boot_end_s=$(( $boot_start_s + $boot_size_mib * $sectors_per_mib - 1 ))
 root_start_s=$(( $boot_start_s + $boot_size_mib * $sectors_per_mib ))
 root_end_s=$(( $root_start_s + $root_size_mib * $sectors_per_mib - 1 ))
 
-efi_part_num=$(sudo parted -m "/dev/$disk" print | awk -F: 'END {print $1+1}')
-efi_part="/dev/$disk$efi_part_num"
+efi_part_num=$(sudo parted -m "/dev/$disk" print | awk -F: 'END {print $1+1}') //1
+if [[ "$disk" =~ nvme|mmcblk ]]; then
+    efi_part="/dev/${disk}p${efi_part_num}"
+else
+    efi_part="/dev/${disk}${efi_part_num}"
+fi
 
-root_part_num=$(( $efi_part_num + 1 ))
-root_part="/dev/$disk$root_part_num"
+root_part_num=$(( $efi_part_num + 1 )) //2
+if [[ "$disk" =~ nvme|mmcblk ]]; then
+    root_part="/dev/${disk}p${root_part_num}"
+else
+    root_part="/dev/${disk}${root_part_num}"
+fi
 
 reset
 
